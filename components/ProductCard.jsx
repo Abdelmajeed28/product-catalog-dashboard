@@ -1,14 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductCard({ product }) {
   return (
     <Link href={`/products/${product._id}`}>
-      <div className="border rounded-xl p-4 shadow-sm">
-        <h2 className="text-lg font-semibold">{product.title}</h2>
+      <div className="border rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition cursor-pointer">
+        <div className="relative w-full h-48">
+          <Image
+            src={product.images?.[0] || "/placeholder.jpg"}
+            alt={product.title}
+            fill
+            className="object-cover"
+          />
+        </div>
 
-        <p className="text-gray-500">{product.category}</p>
+        <div className="p-4">
+          <h2 className="text-lg font-semibold">{product.title}</h2>
 
-        <p className="font-bold mt-2">${product.price}</p>
+          <p className="text-gray-500 text-sm">{product.category}</p>
+
+          <p className="font-bold mt-2">${product.price}</p>
+        </div>
       </div>
     </Link>
   );

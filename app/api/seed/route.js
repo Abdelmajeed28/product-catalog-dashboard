@@ -13,21 +13,21 @@ export async function GET() {
       description: "Comfortable running shoes",
       price: 120,
       category: "shoes",
-      images: ["/images/nike1.jpg", "/images/nike2.jpg"],
+      images: ["https://picsum.photos/id/21/800/600"],
     },
     {
       title: "Adidas Hoodie",
       description: "Warm and stylish hoodie",
       price: 80,
       category: "clothing",
-      images: ["/images/adidas1.jpg"],
+      images: ["https://picsum.photos/id/29/800/600"],
     },
     {
       title: "Apple Watch",
       description: "Smart watch with fitness tracking",
       price: 399,
       category: "electronics",
-      images: ["/images/applewatch1.jpg"],
+      images: ["https://picsum.photos/id/160/800/600"],
     },
   ];
 
